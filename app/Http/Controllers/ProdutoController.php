@@ -19,15 +19,17 @@ class ProdutoController extends Controller
     // }
 
     public function store(Request $request){
-        if(Auth::check()){
+        if(Auth::guard("empresa")->check()){
             $produtos = new Produto;
             $produtos->nome_produto = $request->nome_produto;
             $produtos->pontos_produto = $request->pontos_produto;
             $produtos->preco_produto = $request->preco_produto;
-            $empresa_produtos = Auth()->user()->produtos(); //fk
+            $empresa_produtos = Auth::guard("empresa")->id(); //fk
             $produtos->empresa_id = $empresa_produtos;      //fk
             $produtos->save();
-            return redirect()->route('addProduto.index')->with('message', 'Produto criado com sucesso!');
+            return redirect()->route('db_empresa')->with('message', 'Produto criado com sucesso!');
+        } else {
+            return "aqui";
         }
     }
 

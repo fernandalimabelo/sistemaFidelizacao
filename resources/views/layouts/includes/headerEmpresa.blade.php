@@ -44,7 +44,7 @@
                     <ul class="navbar-nav mr-auto">
                     </ul>
                     <span class="navbar-item">
-                        <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('frm-logout').submit()"; class="nav-link text-danger">
+                        <a href="{{ route('logout') }}" onclick="console.log(event); event.preventDefault(); document.getElementById('frm-logout').submit()"; class="nav-link text-danger">
                             <i class="fas fa-sign-out-alt"></i> Sair <span class="sr-only">(current)</span>
                         </a>    
                         <form id="frm-logout" action="{{ route('logoutEmpresa') }}" method="POST" style="display: none;">

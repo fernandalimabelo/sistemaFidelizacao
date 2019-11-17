@@ -15,7 +15,7 @@ class LoginController extends Controller
 
     public function __construct()
     {
-        $this->middleware('guest:empresa');
+        // $this->middleware('guest:empresa');
     }
 
     public function showLoginForm()

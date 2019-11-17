@@ -1,7 +1,6 @@
 @extends('layouts.appEmpresa')
 
 @section('conteudoEmpresa')
-
        
 <div class="tab-content" id="nav-tabContent">
             <!-- cupons =============================================================================================================-->

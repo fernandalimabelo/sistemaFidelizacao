@@ -21,4 +21,9 @@ class HomeController extends Controller
     {
         return view('user.homeUser');
     }
+
+    public function showPrint()
+    {
+        return view('user.printUser');
+    }
 }

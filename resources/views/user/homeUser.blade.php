@@ -66,7 +66,7 @@
                                     </div>
                                 </div>
                                 <div class='modal-footer'>
-                                <a href="printCliente.php" type="button" class="btn btn-success" title="Gerar Bilhete" target="_blank"><i class="fas fa-ticket-alt"></i> Gerar Bilhete</a>
+                                <a href="{{ route('db_user_print') }}" type="button" class="btn btn-success" title="Gerar Bilhete" target="_blank"><i class="fas fa-ticket-alt"></i> Imprimir Bilhete</a>
                                 </div>
                             </div>
                         </form>

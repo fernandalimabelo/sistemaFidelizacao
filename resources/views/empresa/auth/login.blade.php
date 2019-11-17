@@ -15,7 +15,7 @@
                                 </div>
                                 <div class="card-header text-info text-center">{{ __('Login') }}</div>
                                 <div class="card-body">
-                                    <form class="form-horizontal" role="form" method="POST" action="{{ route('loginEmpresa') }}">
+                                    <form class="form-horizontal" role="form" method="POST" action="{{ route('empresa.login') }}">
                                         @csrf
 
                                         <div class="form-group row">
