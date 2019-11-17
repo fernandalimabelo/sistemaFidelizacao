@@ -1,6 +1,8 @@
 <?php
 
-
+Route::get('/', function()
+    {return view('home');
+});
 
 Auth::routes();
 
@@ -12,8 +14,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('empresa/home', 'HomeController@indexEmpresa')->middleware("auth:empresa")->name('db_empresa'); //dashboard empresa
 Route::get('empresa/login', 'Empresa\Auth\LoginController@showLoginForm')->name('viewempresa.login');//retorna a view
 Route::post('empresa/login', 'Empresa\Auth\LoginController@login')->name('empresa.login');// envia o form
-
-
 
 
 Route::get('empresa/cadastrar', 'Empresa\Auth\RegisterController@showRegistrationForm')->name('viewRegisterEmpresa');//retorna a view

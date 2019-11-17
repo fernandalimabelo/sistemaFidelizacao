@@ -270,6 +270,9 @@
                         <div class="col py-3 px-md-5 border bg-light">
                             <div class='pure-modal-wrap a-center small from-bottom'>
                                 <h2 class='text-dark'>Cadastrar Produto</h2>
+                                <!-- <div class='alert alert-success'>
+                                    <p>{{$produtos->message}}</p>
+                                </div> -->
                                 <span class='text-info'>* somente produtos elegíveis a fidelização</span>
                                 <p>
                                     <form action='{{ route('addProduto') }}' method='POST' enctype="multipart/form-data">
