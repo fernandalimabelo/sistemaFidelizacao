@@ -3,25 +3,27 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Produto;
+
+use App\Models\produto;
+// use App\Models\Empresa;
 
 class ProdutoController extends Controller
 {
     public function index(){
         $produtos = Produto::all();
-        return view('list-produtos', compact('produtos'));
+        return view('empresa.db_empresa', compact('produtos'));
     }
 
-    public function create(){
-        return view('include-produtos');
-    }
+    // public function create(){
+    //     return view('include-produtos');
+    // }
 
     public function store(Request $request){
         $produtos = new Produto;
         $produtos->nome_produto = $request->nome_produto;
         $produtos->pontos_produto = $request->pontos_produto;
         $produtos->preco_produto = $request->preco_produto;
-        $produtos->id_estabelecimento_fk = $request->id_estabelecimento_fk;
+        $produtos->id_estabelecimento_fk = Produto::find(1)->empresa;
         $produtos->save();
         return redirect()->route('product.index')->with('message', 'Produto criado com sucesso!');
     }

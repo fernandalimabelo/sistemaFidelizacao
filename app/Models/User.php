@@ -2,9 +2,32 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use App\Notifications\User\ResetPasswordNotification;
+use App\Http\Controllers\User\Auth\RegisterController;
 
-class User extends Model
+class User extends Authenticatable
 {
-    protected $table = 'users';
+    use Notifiable;
+
+    //protected $guard = 'user';
+
+    public function sendPasswordResetNotification($token)
+    {
+        $this->notify(new ResetPasswordNotification($token));
+    }
+
+    protected $fillable = [
+        'name', 'cpf', 'phone', 'email', 'password',
+    ];
+
+    protected $hidden = [
+        'password', 'remember_token',
+    ];
+
+    protected $casts = [
+        'email_verified_at' => 'datetime',
+    ];
 }
