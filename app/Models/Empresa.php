@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use App\Notifications\Admin\ResetPasswordNotification;
+use Eloquent;
 
 class Empresa extends Authenticatable
 {
@@ -31,5 +32,11 @@ class Empresa extends Authenticatable
 
     public function produtos(){
         return $this->hasMany(Produto::class);
+    }
+}
+
+class Produto extends Eloquent{
+    public function empresa(){
+        return $this->belongsTo('Empresas');
     }
 }

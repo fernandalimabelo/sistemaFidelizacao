@@ -47,15 +47,15 @@
                                 <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Entrar</a>
                                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                            <a href="{{ route('loginEmpresa') }}"><label class='open-modal dropdown-item text-info'><i class="fas fa-building"></i> Empresas</label></a>
-                                            <a href="{{ route('loginUser') }}"><label class='open-modal dropdown-item text-success'><i class="fa fa-users" aria-hidden="true"></i> Clientes</label></a>
+                                            <a href="{{ route('viewLoginEmpresa') }}"><label class='open-modal dropdown-item text-info'><i class="fas fa-building"></i> Empresas</label></a>
+                                            <a href="{{ route('viewLoginUser') }}"><label class='open-modal dropdown-item text-success'><i class="fa fa-users" aria-hidden="true"></i> Clientes</label></a>
                                         </div>
                                     </li>
                                     <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cadastrar</a>
                                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                            <a href="{{ route('registerEmpresa') }}"><label class='open-modal dropdown-item text-info'><i class="fas fa-building"></i> Empresas</label></a>
-                                            <a href="{{ route('registerUser') }}"><label for='modal-trigger-center-cadastrarCli' class='open-modal dropdown-item text-success'><i class="fa fa-users" aria-hidden="true"></i> Clientes</label></a>
+                                            <a href="{{ route('viewRegisterEmpresa') }}"><label class='open-modal dropdown-item text-info'><i class="fas fa-building"></i> Empresas</label></a>
+                                            <a href="{{ route('viewRegisterUser') }}"><label for='modal-trigger-center-cadastrarCli' class='open-modal dropdown-item text-success'><i class="fa fa-users" aria-hidden="true"></i> Clientes</label></a>
                                         </div>
                                     </li>
                                     

@@ -16,7 +16,7 @@
                                 </div>
                                 <div class="card-header text-success text-center">{{ __('Login') }}</div>
                                 <div class="card-body">
-                                    <form class="form-horizontal" role="form" method="POST" action="{{ route('user.login') }}">
+                                    <form class="form-horizontal" role="form" method="POST" action="{{ route('loginUser') }}">
                                         @csrf
 
                                         <div class="form-group row">
@@ -45,11 +45,7 @@
                                                     </span>
                                                 @enderror
 
-                                                @if (Route::has('password.request'))
-                                                    <a class="btn text-success" href="{{ route('user.password.request') }}">
-                                                        {{ __('esqueceu a senha?') }}
-                                                    </a>
-                                                @endif
+                                               
                                             </div>
                                         </div>
 

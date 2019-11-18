@@ -17,7 +17,7 @@
                                 <div class="card-header text-success text-center">{{ __('Cadastrar') }}</div>
 
                                 <div class="card-body">
-                                    <form method="POST" action="{{ route('user.register') }}">
+                                    <form method="POST" action="{{ route('registerUser') }}">
                                         @csrf
 
                                         <div class="form-group row">
