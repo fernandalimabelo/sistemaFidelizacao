@@ -11,7 +11,7 @@ class LoginController extends Controller
 {
     use AuthenticatesUsers;
 
-    protected $redirectTo = '/home';
+    protected $redirectTo = 'empresa/home';
 
     public function __construct()
     {
@@ -23,7 +23,7 @@ class LoginController extends Controller
         return view('empresa.auth.login');
     }
     public function logout(Request $request)
-    {
+    {   
         $this->guard()->logout();
         return redirect('/empresa/login');
     }

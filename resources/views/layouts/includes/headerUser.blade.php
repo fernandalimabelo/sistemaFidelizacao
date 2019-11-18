@@ -44,16 +44,12 @@
                     <ul class="navbar-nav mr-auto">
                     </ul>
                     <span class="navbar-item">
-                    <!-- <form action="{{ route('logout') }}" method='POST'>
-                        <button type='submit'>Sair </button>
-                    </form> -->
-                    <!-- <a class="nav-link text-danger" href="{{ route('logout') }}"><i class="fas fa-sign-out-alt"></i> Sair <span class="sr-only">(current)</span></a>
-
-                    <a class="dropdown-item" href="{{ route('logout') }}"
-                        onclick="event.preventDefault();
-                                        document.getElementById('logout-form').submit();">
-                        {{ __('Logout') }}
-                    </a> -->
+                        <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('frm-logout').submit()"; class="nav-link text-danger">
+                            <i class="fas fa-sign-out-alt"></i> Sair <span class="sr-only">(current)</span>
+                        </a>    
+                        <form id="frm-logout" action="{{ route('logoutUser') }}" method="POST" style="display: none;">
+                            {{ csrf_field() }}
+                        </form>
                     </span>
                 </div>
             </nav>

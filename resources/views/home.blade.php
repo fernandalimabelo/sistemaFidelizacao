@@ -8,7 +8,7 @@
                     <div class="col-12">
                         <div class="fancy-hero-content text-center">
                         <h2>Olá, esse é o Sistema de Fidelização!</h2>                        
-                            <a href="{{ route('user.login') }}"><label class='open-modal btn fancy-btn align-middle'> <span class='align-middle'> MEUS CUPONS </span></label></a>
+                            <a href="{{ route('loginUser') }}"><label class='open-modal btn fancy-btn align-middle'> <span class='align-middle'> MEUS CUPONS </span></label></a>
                         </div>
                     </div>
                 </div>

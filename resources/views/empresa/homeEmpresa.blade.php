@@ -273,7 +273,7 @@
                                 <h2 class='text-dark'>Cadastrar Produto</h2>
                                 <span class='text-info'>* somente produtos elegíveis a fidelização</span>
                                 <p>
-                                    <form action='{{ route('product.store') }}' method='POST' enctype="multipart/form-data">
+                                    <form action='{{ route('addProduto') }}' method='POST' enctype="multipart/form-data">
                                     {{ csrf_field() }}
                                         <div class='modal-body'>
                                             <div class='form-group text-left'>
