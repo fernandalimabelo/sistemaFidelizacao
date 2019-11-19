@@ -25,7 +25,7 @@ class LoginController extends Controller
     public function logout(Request $request)
     {   
         $this->guard()->logout();
-        return redirect('/empresa/login');
+        return redirect('/empresa/login')->with('success', 'Logout efetuado com sucesso!');
     }
     protected function guard()
     {

@@ -11,10 +11,10 @@ class RedirectIfAuthenticated
     {
         if (Auth::guard($guard)->check()) {
             if($guard == 'empresa'){
-                return redirect()->route("db_empresa");
+                return redirect()->route("db_empresa")->with('success', 'Empresa logada com sucesso!');
             }
             elseif($guard == 'user'){
-                return redirect()->route("db_user");            
+                return redirect()->route("db_user")->with('success', 'Cliente logado com sucesso!');    
             }
             else{
                 return redirect()->route("home");            

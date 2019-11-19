@@ -27,8 +27,8 @@ class ProdutoController extends Controller
             $empresa_produtos = Auth::guard("empresa")->id(); //fk
             $produtos->empresa_id = $empresa_produtos;      //fk
             $produtos->save();
-            return redirect()->route('db_empresa');
-            // return redirect()->route('db_empresa')->with('success', 'Produto cadastrado com sucesso!');
+            // return redirect()->route('db_empresa');
+            return redirect()->route('db_empresa')->with('success', 'Produto cadastrado com sucesso!');
         } else {
             return "aqui";
         }
